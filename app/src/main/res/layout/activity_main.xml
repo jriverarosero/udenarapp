@@ -7,14 +7,14 @@
 
     <TextView android:text="@string/title" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/" />
+        android:id="@+id/ll" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="home"
         android:id="@+id/button"
-        android:layout_below="@+id/"
+        android:layout_below="@+id/a"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="141dp" />
 
