@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/UdenarApp.iml" filepath="$PROJECT_DIR$/UdenarApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/udenarapp.iml" filepath="$PROJECT_DIR$/udenarapp.iml" />
     </modules>
   </component>
 </project>
