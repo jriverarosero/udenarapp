@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -70,17 +71,22 @@ public class list_contact_layout extends ActionBarActivity {
 
                 Log.e("si","result"+httppost.getURI().toString());
 
-                JSONArray jsonMainNode = new JSONArray(jsonResult);
+                JSONObject jsonMainNode = new JSONObject(jsonResult);
+
 
                 list = new ArrayList<String>();
                 Log.e("si","sdf 2");
-                for (int i = 0; i < jsonMainNode.length(); i++) {
-                    JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
 
 
-                    String materia = jsonChildNode.optString("materia");
-                    list.add(materia);
-                }
+
+                    JSONArray materias = jsonMainNode.getJSONArray("materias");
+                    for(int i=0;i<materias.length();i++){
+                        JSONObject ch= materias.getJSONObject(i);
+                        String cad=ch.optString("materia");
+                        list.add(cad);
+                    }
+
+
 
 
             } catch (Exception e) {
