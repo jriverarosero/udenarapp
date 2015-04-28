@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="title">UDENAR2</string>
     <string name="title_activity_login">login</string>
+    <string name="title_activity_resultado_notas">ResultadoNotas</string>
 
 </resources>

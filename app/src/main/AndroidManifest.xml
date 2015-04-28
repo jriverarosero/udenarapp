@@ -20,6 +20,10 @@
             android:name=".Login"
             android:label="@string/title_activity_login" >
         </activity>
+        <activity
+            android:name=".ResultadoNotas"
+            android:label="@string/title_activity_resultado_notas" >
+        </activity>
     </application>
 
 </manifest>
