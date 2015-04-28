@@ -23,6 +23,11 @@ public class MainActivity extends ActionBarActivity {
         startActivity(i);
     }
 
+    public void desprendible(View v){
+        Intent i = new Intent(this, ConsultaDesprendible.class );
+        startActivity(i);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

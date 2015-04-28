@@ -8,5 +8,6 @@
     <string name="title_activity_login">login</string>
     <string name="title_activity_resultado_notas">ResultadoNotas</string>
     <string name="title_activity_list_contact_layout">list_contact_layout</string>
+    <string name="title_activity_consulta_desprendible">ConsultaDesprendible</string>
 
 </resources>

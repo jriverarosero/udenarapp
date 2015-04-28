@@ -23,12 +23,12 @@
             android:label="@string/title_activity_login" >
         </activity>
         <activity
-            android:name=".ResultadoNotas"
-            android:label="@string/title_activity_resultado_notas" >
-        </activity>
-        <activity
             android:name=".list_contact_layout"
             android:label="@string/title_activity_list_contact_layout" >
+        </activity>
+        <activity
+            android:name=".ConsultaDesprendible"
+            android:label="@string/title_activity_consulta_desprendible" >
         </activity>
     </application>
 

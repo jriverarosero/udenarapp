@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <Button
         android:layout_width="match_parent"
@@ -13,5 +14,15 @@
         android:onClick="login"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consulta Desprendible"
+        android:id="@+id/btnDes"
+        android:onClick="desprendible"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

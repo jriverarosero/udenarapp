@@ -69,7 +69,7 @@ public class list_contact_layout extends ActionBarActivity {
                 HttpResponse response = httpclient.execute(httppost);
                 String jsonResult = inputStreamToString(response.getEntity().getContent()).toString();
 
-                Log.e("si","result"+httppost.getURI().toString());
+                //Log.e("si","result"+httppost.getURI().toString());
 
                 JSONObject jsonMainNode = new JSONObject(jsonResult);
 

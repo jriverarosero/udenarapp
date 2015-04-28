@@ -6,19 +6,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class ResultadoNotas extends ActionBarActivity {
+public class ConsultaDesprendible extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resultado_notas);
+        setContentView(R.layout.activity_consulta_desprendible);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_resultado_notas, menu);
+        getMenuInflater().inflate(R.menu.menu_consulta_desprendible, menu);
         return true;
     }
 
