@@ -75,7 +75,7 @@ public class list_contact_layout extends ActionBarActivity {
 
 
                 list = new ArrayList<String>();
-                Log.e("si","sdf 2");
+               // Log.e("si","sdf 2");
 
 
 
