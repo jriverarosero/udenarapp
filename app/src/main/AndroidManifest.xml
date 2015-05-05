@@ -30,6 +30,10 @@
             android:name=".ConsultaDesprendible"
             android:label="@string/title_activity_consulta_desprendible" >
         </activity>
+        <activity
+            android:name=".MainService"
+            android:label="@string/title_activity_main_service" >
+        </activity>
     </application>
 
 </manifest>

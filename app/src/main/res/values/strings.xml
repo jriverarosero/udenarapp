@@ -9,5 +9,12 @@
     <string name="title_activity_resultado_notas">ResultadoNotas</string>
     <string name="title_activity_list_contact_layout">list_contact_layout</string>
     <string name="title_activity_consulta_desprendible">ConsultaDesprendible</string>
+    <string name="title_activity_main_service">MainService</string>
+    <string name="title_section1">Noticias</string>
+    <string name="title_section2">Notas</string>
+    <string name="title_section3">Desprendible</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
 
 </resources>

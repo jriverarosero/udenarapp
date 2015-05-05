@@ -15,17 +15,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    }
-
-
-    public void login(View v){
-        Intent i = new Intent(this, Login.class );
+        Intent i = new Intent(this, MainService.class );
         startActivity(i);
-    }
 
-    public void desprendible(View v){
-        Intent i = new Intent(this, ConsultaDesprendible.class );
-        startActivity(i);
     }
 
     @Override

@@ -88,8 +88,10 @@ public class list_contact_layout extends ActionBarActivity {
 
 
                // Log.e("si","sdf 2");
-
-
+                String nom=jsonMainNode.optString("nombre")+"   "+jsonMainNode.optString("apellido");
+                String car=jsonMainNode.optString("programa")+"   "+jsonMainNode.optString("semestre");
+                list.add(nom);
+                list.add(car);
                 JSONArray materias = jsonMainNode.getJSONArray("materias");
                  for(int i=0;i<materias.length();i++){
                         JSONObject ch= materias.getJSONObject(i);
