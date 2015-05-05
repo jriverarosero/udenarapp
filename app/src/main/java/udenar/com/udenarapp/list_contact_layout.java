@@ -33,7 +33,8 @@ public class list_contact_layout extends ActionBarActivity {
     HttpGet httppost;
     ProgressDialog dialog;
     String get_subject_url = "http://190.254.4.125:90/academica/getSubject/";
-    ArrayList<String> list;
+    ArrayList<String> list,list1,list2,list3;
+    ArrayList<ArrayList> totList;
     ArrayAdapter<String> adapter;
     Context con;
     ListView lv;
@@ -45,7 +46,7 @@ public class list_contact_layout extends ActionBarActivity {
         setContentView(R.layout.activity_list_contact_layout);
 
         dialog = new ProgressDialog(this);
-        dialog.setMessage("Obteniendo Materias");
+        dialog.setMessage("Obteniendo Respuesta");
         dialog.setCancelable(false);
 
         httpclient = new DefaultHttpClient();
@@ -67,26 +68,39 @@ public class list_contact_layout extends ActionBarActivity {
         protected ListView doInBackground(String... urls) {
             try {
                 HttpResponse response = httpclient.execute(httppost);
+                list = new ArrayList<String>();
+                list1 = new ArrayList<String>();
+                list2 = new ArrayList<String>();
+                list3 = new ArrayList<String>();
+                totList = new ArrayList<ArrayList>();
+
                 String jsonResult = inputStreamToString(response.getEntity().getContent()).toString();
 
                 //Log.e("si","result"+httppost.getURI().toString());
 
+
+
                 JSONObject jsonMainNode = new JSONObject(jsonResult);
 
 
-                list = new ArrayList<String>();
+
+
+
+
                // Log.e("si","sdf 2");
 
 
-
-                    JSONArray materias = jsonMainNode.getJSONArray("materias");
-                    for(int i=0;i<materias.length();i++){
+                JSONArray materias = jsonMainNode.getJSONArray("materias");
+                 for(int i=0;i<materias.length();i++){
                         JSONObject ch= materias.getJSONObject(i);
-                        String cad=ch.optString("materia");
-                        list.add(cad);
-                    }
-
-
+                        String cad=ch.optString("codigo");
+                        String cad1=ch.optString("materia");
+                        String cad2=ch.optString("veces_cursada");
+                        String cad3=ch.optString("observacion");
+                        String totCad =""+cad+" "+cad1+" "+cad2+" "+"34"+"";
+                        list.add(totCad);
+                 }
+                 totList.add(list);
 
 
             } catch (Exception e) {
@@ -101,7 +115,7 @@ public class list_contact_layout extends ActionBarActivity {
         protected void onPostExecute(ListView bytes) {
 
             try {
-                adapter = new ArrayAdapter<String>(con, android.R.layout.simple_list_item_1, list);
+                adapter = new ArrayAdapter<String>(con, android.R.layout.simple_list_item_1,list);
                 lv.setAdapter(adapter);
 
             }catch (Exception e){
