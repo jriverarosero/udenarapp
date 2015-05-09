@@ -23,9 +23,6 @@ public class ListViewAdapter extends BaseAdapter {
         this.imagenes = imagenes;
     }
 
-
-
-
     @Override
     public int getCount() {
         return titulos.length;

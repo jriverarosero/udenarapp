@@ -6,8 +6,50 @@
 
     <!-- As the main content view, the view below consumes the entire
          space available using match_parent in both dimensions. -->
-    <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <FrameLayout android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <LinearLayout
+            android:id="@+id/LL01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/LL02"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tvLoadTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOTICIAS UDENAR"
+                    android:textStyle="normal|bold"
+                    android:textColor="#ff90c34b"
+                    android:textSize="20dp">
+                </TextView>
+                <Button
+                    android:id="@+id/btnLoad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Acualizar">
+                </Button>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lstData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+            </ListView>
+
+        </LinearLayout>
+    </FrameLayout>
 
     <!-- android:layout_gravity="start" tells DrawerLayout to treat
          this as a sliding drawer on the left side for left-to-right
@@ -20,5 +62,8 @@
         android:layout_width="@dimen/navigation_drawer_width" android:layout_height="match_parent"
         android:layout_gravity="start" android:name="udenar.com.udenarapp.NavigationDrawerFragment"
         tools:layout="@layout/fragment_navigation_drawer" />
+
+
+
 
 </android.support.v4.widget.DrawerLayout>

@@ -55,7 +55,7 @@ public class NavigationDrawerFragment extends Fragment {
     private View mFragmentContainerView;
     private ListViewAdapter adapter;
 
-    private int mCurrentSelectedPosition = 0;
+    private int mCurrentSelectedPosition;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
@@ -63,7 +63,6 @@ public class NavigationDrawerFragment extends Fragment {
             " Noticias",
             " Materias",
             " Desprendible",
-
     };
 
     int[] imagenes = {
@@ -89,7 +88,7 @@ public class NavigationDrawerFragment extends Fragment {
         }
 
         // Select either the default item (0) or the last selected item.
-        selectItem(mCurrentSelectedPosition);
+        //selectItem(mCurrentSelectedPosition);
     }
 
     @Override
@@ -252,6 +251,7 @@ public class NavigationDrawerFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
@@ -271,7 +271,7 @@ public class NavigationDrawerFragment extends Fragment {
     private void showGlobalContextActionBar() {
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(true);
-        //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setTitle(R.string.app_name);
     }
 
