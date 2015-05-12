@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,10 +15,12 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    }
+
+    public void lanzar(View v){
         Intent r= new Intent(this, MainService.class );
         startActivity(r);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
