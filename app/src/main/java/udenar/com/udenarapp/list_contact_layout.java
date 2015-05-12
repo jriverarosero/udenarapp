@@ -99,7 +99,7 @@ public class list_contact_layout extends ActionBarActivity {
                         String cad1=ch.optString("materia");
                         String cad2=ch.optString("veces_cursada");
                         String cad3=ch.optString("observacion");
-                        String totCad =""+cad+" "+cad1+" "+cad2+" "+"34"+"";
+                        String totCad =""+cad+" "+cad1+" "+cad2+" "+cad3+"";
                         list.add(totCad);
                  }
                  totList.add(list);
