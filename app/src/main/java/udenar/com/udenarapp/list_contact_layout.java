@@ -32,7 +32,7 @@ public class list_contact_layout extends ActionBarActivity {
     HttpClient httpclient;
     HttpGet httppost;
     ProgressDialog dialog;
-    String get_subject_url = "http://190.254.4.125:90/academica/getSubject/";
+    String get_subject_url = "http://ocara.udenar.edu.co/academicaws/getSubject/";
     ArrayList<String> list,list1,list2,list3;
     ArrayList<ArrayList> totList;
     ArrayAdapter<String> adapter;

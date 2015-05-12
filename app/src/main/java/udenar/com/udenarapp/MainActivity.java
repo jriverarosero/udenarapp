@@ -31,7 +31,6 @@ public class MainActivity extends ActionBarActivity {
                     finish();
 
                 } catch (Exception e) {
-
                 }
             }
         };
