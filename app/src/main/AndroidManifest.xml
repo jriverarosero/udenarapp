@@ -33,9 +33,11 @@
         <activity
             android:name=".MainService"
             android:label="@string/title_activity_main_service" >
-
         </activity>
-
+        <activity
+            android:name=".list_tickets"
+            android:label="@string/title_activity_list_tickets" >
+        </activity>
     </application>
 
 </manifest>

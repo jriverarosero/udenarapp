@@ -37,7 +37,7 @@ public class MainService extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     static final String DATA_TITLE = "T";
-    static final String DATA_LINK  = "L";
+    static final String DATA_LINK = "L";
     static LinkedList<HashMap<String, String>> data;
     static String feedUrl = "http://ccomunicaciones.udenar.edu.co/?feed=rss2";
     private ProgressDialog progressDialog;
@@ -47,7 +47,7 @@ public class MainService extends ActionBarActivity
         @SuppressWarnings("unchecked")
         public void handleMessage(Message msg) {
             if (msg.obj != null) {
-                data = (LinkedList<HashMap<String, String>>)msg.obj;
+                data = (LinkedList<HashMap<String, String>>) msg.obj;
                 setData(data);
             }
             progressDialog.dismiss();
@@ -131,11 +131,11 @@ public class MainService extends ActionBarActivity
 
     }
 
-    private void setData(LinkedList<HashMap<String, String>> data){
+    private void setData(LinkedList<HashMap<String, String>> data) {
         SimpleAdapter sAdapter = new SimpleAdapter(getApplicationContext(), data,
                 android.R.layout.two_line_list_item,
-                new String[] { DATA_TITLE /*,DATA_LINK*/},
-                new int[] { android.R.id.text1/*, android.R.id.text2 */});
+                new String[]{DATA_TITLE /*,DATA_LINK*/},
+                new int[]{android.R.id.text1/*, android.R.id.text2 */});
         ListView lv = (ListView) findViewById(R.id.lstData);
         lv.setAdapter(sAdapter);
     }
@@ -147,14 +147,15 @@ public class MainService extends ActionBarActivity
                 "Por favor espere mientras se cargan los datos...",
                 true);
 
-        new Thread(new Runnable(){
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 XMLParser parser = new XMLParser(feedUrl);
                 Message msg = progressHandler.obtainMessage();
                 msg.obj = parser.parse();
                 progressHandler.sendMessage(msg);
-            }}).start();
+            }
+        }).start();
     }
 
     @Override
@@ -162,7 +163,7 @@ public class MainService extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1 ))
+                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
     }
 
@@ -170,14 +171,14 @@ public class MainService extends ActionBarActivity
 
         switch (number) {
             case 1:
-                mTitle="UDENAR";
+                mTitle = "UDENAR";
                 break;
             case 2:
-                Intent i = new Intent(this, Login.class );
+                Intent i = new Intent(this, Login.class);
                 startActivity(i);
                 break;
             case 3:
-                Intent j = new Intent(this, ConsultaDesprendible.class );
+                Intent j = new Intent(this, ConsultaDesprendible.class);
                 startActivity(j);
                 break;
         }
