@@ -68,10 +68,8 @@ public class list_tickets extends ActionBarActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("Fecha",date1.getText().toString());
-                //httppost = new HttpGet("http://192.168.9.136:90/academica/getTickets/123456/2015-04-04/2015-05-05");
                 httppost = new HttpGet(get_subject_url + id + "/" + date1.getText() + "/" + date2.getText());
-                Log.e("Fecha",get_subject_url + id + "/" + date1.getText() + "/" + date2.getText());
+                Log.e("Fecha", get_subject_url + id + "/" + date1.getText() + "/" + date2.getText());
                 new MiTarea().execute();
             }
         });
@@ -92,13 +90,13 @@ public class list_tickets extends ActionBarActivity {
 
                 String jsonResult = inputStreamToString(response.getEntity().getContent()).toString();
 
-                Log.e("si","result"+httppost.getURI().toString());
+                Log.e("si", "result" + httppost.getURI().toString());
 
 
                 JSONObject jsonMainNode = new JSONObject(jsonResult);
                 JSONArray jsonArray = jsonMainNode.getJSONArray("desprendibles");
 
-                 Log.e("si","sdf 2");
+                Log.e("si", "sdf 2");
                 String nom = jsonMainNode.optString("nombre") + "   " + jsonMainNode.optString("apellido");
                 list.add(nom);
                 list.add("Desprendibles");
@@ -112,7 +110,7 @@ public class list_tickets extends ActionBarActivity {
                     String cad5 = ch.optString("nombre");
                     String cad6 = ch.optString("tipo");
 
-                    String totCad = "" + cad + " " + cad1 + " " + cad2 + " " + cad3 + " "+ cad4 + " "+ cad5+" "+ cad6+" ";
+                    String totCad = "" + cad + " " + cad1 + " " + cad2 + " " + cad3 + " " + cad4 + " " + cad5 + " " + cad6 + " ";
 /*                    if(cad6.compareTo("D")==0){
                         totCad = "" + cad + " " + cad1 + " " + cad2 + " " + cad3 + " "+ cad4 + " "+ cad5 + "Descuento";
                     } else if(cad6.compareTo("B")==0){
